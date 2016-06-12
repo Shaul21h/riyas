@@ -276,7 +276,28 @@ $(function() {
 
 
 
+    //RSVP
 
+    $("#rsvpSubmit").bind("click", function (e) {
+        var formData = {
+            username: $("#name").val(),
+            email: $("#email").val(),
+            notes: $("#message").val()
+        }
+
+        $.ajax({
+            url: '/rsvpied',
+            type: "POST",
+            body: formData,
+            success: function(response){
+                $("#rsvp-form").hide();
+                $("#thankyou").show();
+
+            }
+        });
+
+
+    })
 
 
 });

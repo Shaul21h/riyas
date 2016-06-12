@@ -4,6 +4,8 @@
 (function(){
 
     var express = require("express");
+    var bodyParser = require('body-parser');
+
 
     var fs = require("fs");
 
@@ -12,6 +14,13 @@
     app.set('views', './views');
 
     app.set('view engine', 'ejs');
+
+
+    // parse application/x-www-form-urlencoded
+    app.use(bodyParser.urlencoded({ extended: false }))
+
+    // parse application/json
+    app.use(bodyParser.json())
 
     app.use(express.static(__dirname+'/public'));
 

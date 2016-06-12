@@ -1866,3 +1866,19 @@ p.cursive{
 	font-family: cursive;
 	font-size: 19px;
 }
+
+.title-bg .insha-allah{
+	text-align: center;
+	margin-top: -40px;
+	color: #fff;
+}
+
+h1.form-inline{
+	text-align: center;
+	color: #df2349;
+	display: none;
+}
+
+audio{
+	display: none;
+}
