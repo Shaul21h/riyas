@@ -13,5 +13,9 @@
     "ejs": "^2.4.2",
     "express": "^4.13.4",
     "firebase": "^3.0.4"
+  },
+  "devDependencies": {
+    "nodemailer": "^2.4.2",
+    "parse": "^1.8.5"
   }
 }

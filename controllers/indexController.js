@@ -26,18 +26,20 @@ function indexController(app){
 
     function rsvpHandler(req, res){
 
-        if(req.body.username || req.body.email){
+
+
+
+        if(req.body.username || req.body.email) {
+
             fire.database().ref('users').push({
                 username: req.body.username || "",
                 email: req.body.email || "",
                 notes: req.body.notes || ""
             });
+            res.send({
+                message: "Thank you."
+            })
         }
-
-
-        res.send({
-            message: "Thank you."
-        })
 
     }
 

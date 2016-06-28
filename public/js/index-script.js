@@ -285,10 +285,11 @@ $(function() {
             notes: $("#message").val()
         }
 
+        console.info("Submitting your RSVP")
         $.ajax({
             url: '/rsvpied',
             type: "POST",
-            body: formData,
+            data: formData,
             success: function(response){
                 $("#rsvp-form").hide();
                 $("#thankyou").show();
